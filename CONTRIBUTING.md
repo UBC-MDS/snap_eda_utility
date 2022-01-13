@@ -3,9 +3,13 @@
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
+You can contribute in many ways:
+
 ## Types of Contributions
 
 ### Report Bugs
+
+Report bugs at: https://github.com/UBC-MDS/snapedautility/issues
 
 If you are reporting a bug, please include:
 
@@ -31,6 +35,8 @@ on the web in blog posts, articles, and such.
 
 ### Submit Feedback
 
+The best way to send feedback is to file an issue at https://github.com/UBC-MDS/snapedautility/issues.
+
 If you are proposing a feature:
 
 * Explain in detail how it would work.
@@ -42,30 +48,59 @@ If you are proposing a feature:
 
 Ready to contribute? Here's how to set up `snapedautility` for local development.
 
-1. Download a copy of `snapedautility` locally.
-2. Install `snapedautility` using `poetry`:
+1. Fork the `snapedautility` repo on GitHub.
 
-    ```console
-    $ poetry install
-    ```
 
-3. Use `git` (or similar) to create a branch for local development and make your changes:
+2. Clone your fork locally:
 
-    ```console
-    $ git checkout -b name-of-your-bugfix-or-feature
-    ```
+	```
+	git clone git@github.com:your_name_here/snapedautility.git
+	```
 
-4. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
+3. Install your local copy with Poetry, this is how you set up your fork for local development:
 
-5. Commit your changes and open a pull request.
+	```
+	cd snapedautility/
+	poetry install
+	```
+
+4. Create a branch for local development:
+
+	```
+	git checkout -b name-of-your-bugfix-or-feature
+	```
+
+   	Now you can make your changes locally.
+   	
+
+5. When you're done making changes, check that your changes pass the tests by running pytest
+
+	```
+	poetry run pytest
+	```
+
+6. Commit your changes and push your branch to GitHub:
+
+	```
+	git add .
+	git commit -m "Your detailed description of your changes."
+	git push origin name-of-your-bugfix-or-feature
+	```
+
+7. Submit a pull request through the GitHub website.
+
 
 ## Pull Request Guidelines
 
+
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include additional tests if appropriate.
-2. If the pull request adds functionality, the docs should be updated.
+1. The pull request should include tests.
+2. If the pull request adds functionality, the docs should be updated. Put
+   your new functionality into a function with a docstring, and add the
+   feature to the list in README.md.
 3. The pull request should work for all currently supported operating systems and versions of Python.
+
 
 ## Code of Conduct
 
