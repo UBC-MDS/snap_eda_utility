@@ -1,4 +1,4 @@
-def plot_corr(df, features=None, width=500, heigh=500):
+def plot_corr(df, features=None, width=250, heigh=250):
     """
     Generates the correlation plot for a list of numeric features in a given dataframe
 
@@ -10,10 +10,10 @@ def plot_corr(df, features=None, width=500, heigh=500):
         List of feature names as string
         len(features) >=2
         None returns plot of all numeric features
-    width: int, default = 500
-        The width of the plot. Default set to 500
-    height: int, default = 500
-        The height of the plot. Default set to 500
+    width: int, default = 250
+        The width of the plot. Default set to 250
+    height: int, default = 250
+        The height of the plot. Default set to 250
 
     Returns
     -------
