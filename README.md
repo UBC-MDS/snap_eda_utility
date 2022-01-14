@@ -2,9 +2,9 @@
 
 snapedautility is an open-source library that generate useful function to kickstart EDA (Exploratory Data Analysis) with just a few lines of code. The system is built around quickly **analyzing the whole dataset** and **providing a detailed report with visualization**. Its goal is to help quick analysis of feature characteristics, detecting outliers from the observations and other such data characterization tasks.
 ## Features
-1. `plot_histogram`: Plots the distribution for numerical, categorical and text features
+1. `plot_histograms`: Plots the distribution for numerical, categorical and text features
 2. `detect_outliers`: Generate a violin plot that indicates the outliers that deviate from other observations on data.
-3. `plot_correlation`: Generates Correlation Plots for numerical (Pearson's correlation), categorical (uncertainty coefficient) and categorical-numerical (correlation ratio) datatypes seamlessly for all data types.
+3. `plot_corr`: Generates Correlation Plots for numerical (Pearson's correlation), categorical (uncertainty coefficient) and categorical-numerical (correlation ratio) datatypes seamlessly for all data types.
 ## Installation
 
 ```bash
@@ -13,7 +13,26 @@ $ pip install snapedautility
 
 ## Usage
 
-- TODO
+### plot_histograms
+```
+>>> from snapedautility.plot_histograms import plot_histograms
+>>> df = penguins_data
+>>> plot_histograms(df, ["Culmen Length (mm)", "Culmen Depth (mm)", 'Species'], 100, 100)
+```
+
+### plot_corr
+```
+>>> from snapedautility.plot_corr import plot_corr
+>>> df = penguins_data
+>>> plot_corr(df, ["Culmen Length (mm)", "Culmen Depth (mm)", 'Species'])
+```
+
+### detect_outliers
+```
+>>> from snapedautility.detect_outliers import detect_outliers 
+>>> s = pd.Series([1,1,2,3,4,5,6,9,10,13,40])
+>>> detect_outliers(s)
+```
 
 ## Contributors
 
