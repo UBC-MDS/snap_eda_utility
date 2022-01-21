@@ -10,7 +10,7 @@ def plot_histograms(df, features, facet_columns=3, width=125, height=125):
 
     Parameters
     ----------
-    data : pandas.core.frame.DataFrame
+    df : pandas.core.frame.DataFrame
         Input dataframe
     features : list
         List of feature names as string
