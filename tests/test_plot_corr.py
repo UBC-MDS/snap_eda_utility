@@ -7,7 +7,7 @@ import altair
 
 def df():
     
-    df =df = pd.DataFrame({"a":np.random.normal(100, 30, 5),
+    df = pd.DataFrame({"a":np.random.normal(100, 30, 5),
                   "b":np.random.normal(8, 5, size=5),
                   "c":np.random.randint(100, size=5),
                  "char":["A","B", "C", "D", "E"]})
