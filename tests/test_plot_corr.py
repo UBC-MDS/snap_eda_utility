@@ -14,7 +14,32 @@ def df():
 
     return df
 
-def test_corr_plot():
+def test_not_df():
+    # Make a plot with features=None
+    plot = plot_corr(df(), features=None)
+
+    # Tests whether a not dataframe input raises TypeError
+    with raises(TypeError):
+        plot_corr(np.array([1, 2, 3, 4, 5]), ["a","b","c"])
+
+def test_features_not_list():
+    # Make a plot with features=None
+    plot = plot_corr(df(), features=None)
+
+    # Tests whether a not list features raises TypeError
+    with raises(TypeError):
+        plot_corr(df(), "a")
+
+def test_features_at_least_2():
+    # Make a plot with features=None
+    plot = plot_corr(df(), features=None)
+
+    # Tests whether a list of a single feature raises ValueError
+    with raises(ValueError):
+        plot_corr(df(), ["a"])
+
+
+def test_corr_plot_altair():
     
     """
     Test function to check the output of corr_plot function.
@@ -36,17 +61,6 @@ def test_corr_plot():
         plot.to_dict()["mark"] == "rect"
     ), "Mark should be of type 'rect'."
 
-    # Tests whether a not dataframe input raises TypeError
-    with raises(TypeError):
-        plot_corr(np.array([1, 2, 3, 4, 5]), ["a","b","c"])
-
-    # Tests whether a not list features raises TypeError
-    with raises(TypeError):
-        plot_corr(df(), "a")
-
-    # Tests whether a list of a single feature raises ValueError
-    with raises(ValueError):
-        plot_corr(df(), ["a"])
 
 def test_corr_plot_subsetting_errors():
     with raises(ValueError):
