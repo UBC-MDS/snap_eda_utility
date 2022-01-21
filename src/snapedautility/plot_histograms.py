@@ -30,7 +30,7 @@ def plot_histograms(df, features, facet_columns=3, width=125, height=125):
     --------
     >>> from snapedautility.plot_histograms import plot_histograms
     >>> df = penguins_data
-    >>> plot_histograms(df, ["Culmen Length (mm)", "Culmen Depth (mm)", 'Species'], 100, 100)
+    >>> plot_histograms(df, ["species", "bill_length_mm", "island"], 100, 100)
     """
     features_set = set(features)
 
