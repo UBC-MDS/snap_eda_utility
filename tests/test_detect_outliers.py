@@ -9,7 +9,7 @@ def simple_series():
 @pytest.fixture
 def empty_series():
     return (
-        pd.Series([])
+        pd.Series([], dtype="float64")
     )
 
 def test_detect_outliers_simple(simple_series):
