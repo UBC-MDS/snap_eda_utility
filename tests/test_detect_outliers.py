@@ -9,7 +9,7 @@ def simple_series():
 @pytest.fixture
 def empty_series():
     return (
-        pd.Series([])
+        pd.Series([], dtype="float64")
     )
 
 def test_detect_outliers_simple(simple_series):
@@ -30,14 +30,30 @@ def test_incorrect_simple_input():
     """Test detect outliers with incorrect input."""
     with pytest.raises(TypeError):
         detect_outliers(1)
+    with pytest.raises(TypeError):
+        detect_outliers(False)
+    with pytest.raises(TypeError):
+        detect_outliers("abcdfefg")
+    with pytest.raises(TypeError):
+        detect_outliers(4.5)
+    with pytest.raises(TypeError):
+        detect_outliers(None)
 
 def test_incorrect_input_plt(simple_series):
     s = simple_series
     """Test detect outliers with incorrect input."""
     with pytest.raises(TypeError):
-        detect_outliers(s, height=[], width= "abc")
+        detect_outliers(s, height=[])
+    with pytest.raises(TypeError):
+        detect_outliers(s, height=365, width= "abc")
+    with pytest.raises(TypeError):
+        detect_outliers(s, height=250, width= None)
 
 def test_incorrect_empty_input(empty_series):
     """Test detect outliers with incorrect input."""
     with pytest.raises(ValueError):
         detect_outliers(empty_series)
+    with pytest.raises(ValueError):
+        detect_outliers(empty_series, "abc", False)
+    with pytest.raises(ValueError):
+        detect_outliers(empty_series, 250, 250)
