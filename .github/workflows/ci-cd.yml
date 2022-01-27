@@ -3,10 +3,10 @@ name: ci-cd
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   ci:
@@ -51,7 +51,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    # Step 4. Use PSR to make release
+    # Step 4. Use PSR to make release (add to toml)
     - name: Python Semantic Release
       run: |
           pip install python-semantic-release

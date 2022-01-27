@@ -20,6 +20,8 @@ def detect_outliers(s, width=250, height=250):
     List of integers
         Boolean array with same length as the input,
         indices of outlier marked.
+    `altair plot`
+        An interactive altair correlation plot
     Examples
     --------
     >>> from snapedautility.detect_outliers import detect_outliers 

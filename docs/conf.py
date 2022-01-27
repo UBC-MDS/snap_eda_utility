@@ -7,8 +7,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u"snapedautility"
-copyright = u"2022, Kyle Ahn"
-author = u"Kyle Ahn"
+copyright = u"2022, Kyle Ahn, Harry Chan, Dongxiao Li"
+author = u"Kyle Ahn, Harry Chan, Dongxiao Li"
 
 # -- General configuration ---------------------------------------------------
 
