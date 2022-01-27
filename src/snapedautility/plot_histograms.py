@@ -49,24 +49,26 @@ def plot_histograms(df, features, facet_columns=3, width=125, height=125):
     # Create alt.Chart for categorical features
     categorical_barplot = (
         alt.Chart(df)
-        .transform_fold(cat_cols)
         .mark_bar()
-        .encode(alt.X("value:N"), y="count()")
+        .encode(
+            x=alt.X(alt.repeat(), type='nominal'),
+            y=alt.Y('count()', title="Count of Records"))
         .properties(width=width, height=height)
-        .facet(facet="Categorical Features:N", columns=facet_columns)
+        .repeat(cat_cols, columns=facet_columns)
     )
 
     # Create alt.Chart for numeric features.
     numeric_barplot = (
         alt.Chart(df)
-        .transform_fold(numeric_cols)
         .mark_bar()
-        .encode(alt.X("value:Q", title="value", bin=True), y="count()")
+        .encode(
+            x=alt.X(alt.repeat(), type='quantitative', bin=alt.Bin(maxbins=30)),
+            y=alt.Y('count()', title="Numberic Features"))
         .properties(width=width, height=height)
-        .facet(facet="Numeric Features:N", columns=facet_columns)
-        .resolve_scale(x="independent")
+        .repeat(numeric_cols, columns=facet_columns)
     )
 
+    #categorical_barplot
     histograms_plot = categorical_barplot & numeric_barplot
     histograms_plot.title = "Histograms for Specified Features"
     return histograms_plot
