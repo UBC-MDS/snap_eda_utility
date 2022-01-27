@@ -1,6 +1,10 @@
 # Changelog
 
 <!--next-version-placeholder-->
+
+## v0.1.1 (2022-01-27)
+### Documentation
+* Update example, changelog and author name ([`dc5aa72`](https://github.com/UBC-MDS/snapedautility/commit/dc5aa720796f6369c45197fd91323c9236281507))
 ## v1.0.0 (21/01/2022)
 
 - Support Three functions: plot_histogram, plot_corr, detect_outliers
