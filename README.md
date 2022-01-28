@@ -1,6 +1,6 @@
 # snapedautility
 
-[![ci-cd](https://github.com/UBC-MDS/snapedautility/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/snapedautility/actions/workflows/ci-cd.yml)
+[![ci-cd](https://github.com/UBC-MDS/snapedautility/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/snapedautility/actions/workflows/ci-cd.yml) [![Documentation Status](https://readthedocs.org/projects/snapedautility/badge/?version=latest)]
 
 snapedautility is an open-source library that generate useful function to kickstart EDA (Exploratory Data Analysis) with just a few lines of code. The system is built around quickly **analyzing the whole dataset** and **providing a detailed report with visualization**. Its goal is to help quick analysis of feature characteristics, detecting outliers from the observations and other such data characterization tasks.
 ## Features
