@@ -34,6 +34,10 @@ $ pip install snapedautility
 >>> detect_outliers(s)
 ```
 
+## Documentation
+
+The official documentation is hosted on Read the Docs: https://snapedautility.readthedocs.io/
+
 ## Contributors
 
 |  	 Core contributor| Github.com username| 
